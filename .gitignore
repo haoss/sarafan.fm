@@ -1,0 +1,10 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+*.log
+node_modules
+bower_components
+_sass__copy
+_design
+*.node
+.gulp
+*.orig
