@@ -1,0 +1,245 @@
+/*==========  Desktop First Method  ==========*/
+
+/* 1920 */
+@media only screen and (min-width : 1999px)
+  /**/
+
+@media only screen and (max-width : 1599px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1439px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+  .header
+    &__nav
+      &--uc
+        ul
+          li
+            &+li
+              margin-left: 38px
+  .screen
+    &__two
+      padding: 100px 0
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+  .header
+    background: #f2f5f6
+    height: 55px
+    padding: 0
+    &__logo
+      margin-left: 0
+      height: 55px
+      width: 55px
+      text-align: center
+      &-big, span
+        display: none
+      &-small
+        display: inline-block
+      &>a, &>span
+        height: 55px
+        display: block
+        line-height: 51px
+      &--login
+        width: 180px
+        .header__logo-small
+          vertical-align: -2px
+        span
+          display: inline-block
+          font-size: 20px
+          margin-left: 12px
+    &__nav
+      margin-top: -55px
+      ul
+        li
+          &>a, &>span
+            height: 55px
+            line-height: 55px
+    &__profile
+      margin-top: 8px
+  .screen
+    &__one
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+  .header
+    &__nav
+      text-align: left
+      padding-left: 77px
+      ul
+        li
+          &>a, &>span
+            width: 55px
+            line-height: 53px
+            text-align: center
+            .span
+              display: none
+            .icon-1, .icon-2, .icon-3
+              display: inline-block
+              vertical-align: middle
+      &--uc
+        padding-right: 55px
+        ul
+          li
+            &+li
+              margin-left: 25px
+    &__profile
+      margin-top: 0
+      &-img
+        padding-right: 0
+        margin-right: 0
+        height: 55px
+        width: 55px
+        // line-height: 55px
+        padding-top: 17px
+        padding-left: 17px
+        &>div
+          background: url('../img/icon-profile-smaller.png')
+          height: 20px
+          width: 20px
+          background-size: cover
+          &>div
+            width: 16px
+            height: 16px
+            margin-top: 2px
+            margin-left: 2px
+            img
+              width: 16px
+              height: 16px
+              margin-top: -9px
+        i
+          display: none
+      &-popup
+        top: 55px
+  .btn
+    &--header-enter
+      min-width: inherit
+      padding: 0 5px
+      border: 0
+      background: transparent
+      border-radius: 0
+      height: 55px
+      line-height: 55px
+      color: $primary-color
+  .screen
+    &__one
+      &-title
+        margin-bottom: 40px
+      &-btn
+        display: block
+        &>div
+          width: 100%
+          &+div
+            padding-top: 25px
+      &-img
+        margin-bottom: 25px
+    &__three
+      padding: 60px 0
+    &__five
+      .panel
+        &-body
+          padding-left: 15px
+          padding-right: 15px
+        &-heading
+          .panel-title
+            font-size: 12px
+            [role=button]
+              &::after
+                right: 38px
+
+        &-info
+          top: -2px
+          right: 0px
+      .tab-content
+        margin-left: -15px
+        margin-right: -15px
+      &-btn
+        display: flex
+        flex-direction: column
+        align-items: center
+        a
+          &+a
+            margin-top: 20px
+            margin-left: 0
+  .connection
+    &__block
+      &>div
+        &:nth-child(2)
+          padding-left: 20px
+        &:nth-child(3)
+          display: none
+      &-title
+        font-size: 18px
+        &+.connection__block-link
+          display: block
+          padding-top: 5px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px)
+  .screen
+    &__one
+      &-btn
+        .btn
+          &+small
+            max-width: 270px
+    &__two
+      padding: 0px 0
+  .social
+    &__enter
+      &-title
+        margin-left: 0
+        margin-right: 0
+  .form
+    &-group, &__group
+      &--sms
+        label
+          white-space: normal
+      &__code
+        &+p
+          max-width: 205px
+          margin-left: auto
+          margin-right: auto
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 319px)
+  /**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  .container
+    width: 750px
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  .container
+    width: 970px
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  .container
+    width: 1170px
+
+/* 1440 */
+@media only screen and (min-width : 1440px)
+  /**/
+
+@media only screen and (max-width : 1600px)
+  /**/
+
+/* 1920 */
+@media only screen and (min-width : 1920px)
+  /**/

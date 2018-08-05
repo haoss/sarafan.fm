@@ -1,0 +1,62 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная - экран 3' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная - экран 3' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Логин'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__three
+            form(action="#")
+              
+              .screen__three-block
+                .form-group.form-group--is-phone
+                  img(src="./img/flag.png", alt="")
+                  input(type="text" placeholder="Ваш телефон" value="+7 987 654 3210").form-control
+                
+                .form-group.form-group--sms
+                  img(src="./img/sms.png", alt="")
+                  label Введите код подтверждения из смс
+                  .form-group__code
+                    div
+                      input(type="text" maxlength="1" min="0" max="9").form-control
+                    div
+                      input(type="text" maxlength="1" min="0" max="9").form-control
+                    div
+                      input(type="text" maxlength="1" min="0" max="9").form-control
+                    div
+                      input(type="text" maxlength="1" min="0" max="9").form-control
+                  p
+                    small Вы можете запросить новое SMS с кодом через 
+                      span.font--normal.color--blue 00:59
+                
+                .form-group 
+                  button(type="button").btn.btn--blue далее
+                    
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

@@ -1,0 +1,157 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная - экран 5' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная - экран 5' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Да + иконка'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__five
+            
+            .screen__five-form
+              .form-group
+                input(type="text" placeholder="Ваш телефон").form-control
+            
+            .screen__five-tab
+              .screen__five-title Подключите друзей, возможности, потребности и рекомендации, которые хотите видеть в своей ленте.
+              
+              ul(role='tablist')
+                li.active(role='presentation')
+                  a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') Всё
+                li(role='presentation')
+                  a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') Тел. книга
+                li(role='presentation')
+                  a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab') Вконтакте
+                li(role='presentation')
+                  a(href='#tab4', aria-controls='tab4', role='tab', data-toggle='tab') Facebook
+                li(role='presentation')
+                  a(href='#tab5', aria-controls='tab5', role='tab', data-toggle='tab') Linkedin
+                li(role='presentation')
+                  a(href='#tab6', aria-controls='tab6', role='tab', data-toggle='tab') Однокласники
+                  
+              // Tab panes
+              .tab-content
+                #tab1.tab-pane.active(role='tabpanel')
+                  
+                  .panel-group(role='tablist', aria-multiselectable='false')
+                    .panel
+                      #headingOne11.panel-heading(role='tab')
+                        h4.panel-title
+                          a(role='button', data-toggle='collapse', href='#collapseOne11', aria-expanded='true', aria-controls='collapseOne1')
+                            | Подключены к вашему Сарафану
+                          a.panel-info(href="#!")
+                            +icon1
+                      #collapseOne11.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne11')
+                        .panel-body
+                          
+                          .connection
+                            .connection__block
+                              div
+                                .connection__block-img
+                                  div
+                                    img(src="./img/avatar-1.png", alt="")
+                              div
+                                a(href="#!").connection__block-title Сергей Литовченко
+                            .connection__block
+                              div
+                                .connection__block-img
+                                  div
+                                    img(src="./img/avatar-2.png", alt="")
+                              div
+                                a(href="#!").connection__block-title Антон Камоликов
+                          
+                    .panel
+                      #headingTwo12.panel-heading(role='tab')
+                        h4.panel-title
+                          a(role='button', data-toggle='collapse', href='#collapseTwo12', aria-expanded='true', aria-controls='collapseTwo12')
+                            | Подключить к вашему Сарафану
+                          a.panel-info(href="#!")
+                            +icon1
+                      #collapseTwo12.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingTwo12')
+                        .panel-body
+                          
+                          .connection
+                            .connection__block
+                              div
+                                .connection__block-img
+                                  +iconSocial3
+                                  div
+                                    img(src="./img/avatar-3.png", alt="")
+                              div
+                                a(href="#!").connection__block-title Алексей Сидоренко
+                                .connection__block-link
+                                  a(href="#!") подключить
+                              div
+                                .connection__block-link
+                                  a(href="#!") подключить
+                            .connection__block
+                              div
+                                .connection__block-img
+                                  +iconSocial4
+                                  div
+                                    img(src="./img/avatar-4.png", alt="")
+                              div
+                                a(href="#!").connection__block-title Александр Сидченко
+                                .connection__block-link
+                                  span готово
+                              div
+                                .connection__block-link
+                                  span готово
+                  
+                #tab2.tab-pane(role='tabpanel')
+                  
+                  .panel-group(role='tablist', aria-multiselectable='false')
+                    .panel
+                      #headingOne21.panel-heading(role='tab')
+                        h4.panel-title
+                          a(role='button', data-toggle='collapse', href='#collapseOne21', aria-expanded='true', aria-controls='collapseOne21')
+                            | Подключены к вашему Сарафану
+                          a.panel-info(href="#!")
+                            +icon1
+                      #collapseOne21.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne21')
+                        .panel-body
+                          p 1
+                          
+                    .panel
+                      #headingTwo22.panel-heading(role='tab')
+                        h4.panel-title
+                          a(role='button', data-toggle='collapse', href='#collapseTwo22', aria-expanded='true', aria-controls='collapseTwo22')
+                            | Подключить к вашему Сарафану
+                          a.panel-info(href="#!")
+                            +icon1
+                      #collapseTwo22.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingTwo22')
+                        .panel-body
+                          p 2
+                  
+                #tab3.tab-pane(role='tabpanel') 3
+                #tab4.tab-pane(role='tabpanel') 4
+                #tab5.tab-pane(role='tabpanel') 5
+                #tab6.tab-pane(role='tabpanel') 6
+
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
