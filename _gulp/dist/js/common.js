@@ -56,6 +56,7 @@ $(document).on('ready', function(){
 
   profilePopup();
   uploadImageProfile();
+  inputNumber();
 
   // Chrome Smooth Scroll
   try {
@@ -185,4 +186,21 @@ function uploadImageProfile() {
   $(".form-group__user-img").on('click', function() {
      $(".form-group__user-upload").click();
   });
+}
+
+$(".intlTelInput").intlTelInput();
+
+function inputNumber(){
+  $(document).on('keydown', 'input.onlyNumber', function(evt) {
+    var key = evt.charCode || evt.keyCode || 0;
+
+    return (key == 8 ||
+            key == 9 ||
+            key == 46 ||
+            key == 110 ||
+            key == 190 ||
+            (key >= 35 && key <= 40) ||
+            (key >= 48 && key <= 57) ||
+            (key >= 96 && key <= 105));
+});
 }

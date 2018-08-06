@@ -20,6 +20,7 @@
         <meta name="msapplication-config" content="./favicon/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/intl-tel-input-13.0.0/css/intlTelInput.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -38,23 +39,23 @@
                     <div class="screen__three">
                         <form action="#">
                             <div class="screen__three-block">
-                                <div class="form-group form-group--is-phone"><img src="./img/flag.png" alt="">
-                                    <input type="text" placeholder="Ваш телефон" value="+7 987 654 3210" class="form-control">
+                                <div class="form-group">
+                                    <input type="tel" placeholder="+1 (123) 456-78-91" value="+7 987 654 3210" readonly class="form-control intlTelInput">
                                 </div>
                                 <div class="form-group form-group--sms"><img src="./img/sms.png" alt="">
                                     <label>Введите код подтверждения из смс</label>
                                     <div class="form-group__code">
                                         <div>
-                                            <input type="text" maxlength="1" min="0" max="9" class="form-control">
+                                            <input type="tel" maxlength="1" min="0" max="9" class="form-control onlyNumber">
                                         </div>
                                         <div>
-                                            <input type="text" maxlength="1" min="0" max="9" class="form-control">
+                                            <input type="tel" maxlength="1" min="0" max="9" class="form-control onlyNumber">
                                         </div>
                                         <div>
-                                            <input type="text" maxlength="1" min="0" max="9" class="form-control">
+                                            <input type="tel" maxlength="1" min="0" max="9" class="form-control onlyNumber">
                                         </div>
                                         <div>
-                                            <input type="text" maxlength="1" min="0" max="9" class="form-control">
+                                            <input type="tel" maxlength="1" min="0" max="9" class="form-control onlyNumber">
                                         </div>
                                     </div>
                                     <p><small>Вы можете запросить новое SMS с кодом через <span class="font--normal color--blue">00:59</span></small></p>
@@ -82,6 +83,7 @@
         <!-- Footer js-->
         <script src="./js/libs/floatingLabel.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/intl-tel-input-13.0.0/js/intlTelInput.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

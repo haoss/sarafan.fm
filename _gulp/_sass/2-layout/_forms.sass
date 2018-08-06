@@ -108,6 +108,8 @@ button, html input[type=button], input[type=reset], input[type=submit]
     box-shadow: none
     transition: all .35s
     font-family: $font-roboto-r
+    &:disabled, &:read-only
+      background: none
     &:focus
       box-shadow: none
       border-bottom-color: $color-blue

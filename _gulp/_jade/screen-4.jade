@@ -4,7 +4,7 @@ html(lang="ru")
   
   -var active = 'Главная - экран 4' //активный пункт меню, список в header.jade
   -var pageTitle = 'Главная - экран 4' + ' - Sarafan.fm' //title страницы для генерации верстки  
-  -var uc = 'Да'
+  -var uc = 'Логин'
 
   include ./_include/_head
 
@@ -31,13 +31,13 @@ html(lang="ru")
             
             .social
               .social__list.social__list--mb20.text-center
-                a(href="#!")
+                a(href="#!").active
                   +iconSocial1
-                a(href="#!")
+                span
                   +iconSocial2
-                a(href="#!")
+                span
                   +iconSocial3
-                a(href="#!")
+                span
                   +iconSocial4
             
             .form-group.form-group--label.form-group--mb25

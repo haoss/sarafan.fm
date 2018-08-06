@@ -194,24 +194,40 @@
       font-size: 12px
       a
         color: #b2b7c2
-    a
-      display: inline-block
+    &>a, &>span
+      height: 50px
+      width: 50px
+      display: inline-flex
       vertical-align: middle
       text-decoration: none
       opacity: 1
       transition: opacity 0.35s
-      &:hover
-        opacity: 0.5
-      &+a
+      justify-content: center
+      align-items: center
+      background: $color-blue
+      border-radius: 50%
+      border: 2px solid $color-blue
+      svg
+        .path-1
+          fill: $color-white
+      &+a, &+span
         margin-left: 15px
-    .icon-social-1, .icon-social-2, .icon-social-3, .icon-social-4
-      width: 50px
-      height: 50px
-      display: block
-      .path-1
-        fill: $color-blue
-      .path-2
-        fill: $color-white
+    &>a
+      &:hover
+        background-color: $color-white
+        svg
+          .path-1
+            fill: $color-blue
+      &.active
+        background: $color-blue
+        svg
+          .path-1
+            fill: $color-white
+    &>span
+      background-color: $color-white
+      svg
+        .path-1
+          fill: $color-blue
   &__enter
     &-title
       font-size: 18px
@@ -261,7 +277,7 @@ input.form-group__user-upload
     align-items: center
     &>div
       &:first-child
-        width: 71px
+        width: 55px
         flex-shrink: 0
       &:nth-child(2)
         padding-left: 28px
@@ -272,8 +288,8 @@ input.form-group__user-upload
     &-img
       position: relative
       &>div
-        width: 71px
-        height: 71px
+        width: 55px
+        height: 55px
         border-radius: 50%
         overflow: hidden
         position: relative
@@ -281,21 +297,29 @@ input.form-group__user-upload
         max-width: 100%
         height: auto
         display: block
-      svg
+      span
+        display: block
         width: 15px
         height: 15px
         position: absolute
-        right: -3px
-        bottom: -3px
+        right: -6px
+        bottom: -6px
+        background: $color-blue
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        z-index: 10
+      svg
+        max-width: 60%
+        max-height: 60%
         .path-1
-          fill: $color-blue
-        .path-2
           fill: $color-white
 
     &-title
       text-decoration: none
       color: $primary-color
-      font-size: 20px
+      font-size: 16px
       font-family: $font-roboto-m
       line-height: 26px
       &+.connection__block-link

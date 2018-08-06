@@ -23,22 +23,21 @@ html(lang="ru")
             form(action="#")
               
               .screen__three-block
-                .form-group.form-group--is-phone
-                  img(src="./img/flag.png", alt="")
-                  input(type="text" placeholder="Ваш телефон" value="+7 987 654 3210").form-control
+                .form-group
+                  input(type="tel" placeholder="+1 (123) 456-78-91" value="+7 987 654 3210" readonly).form-control.intlTelInput
                 
                 .form-group.form-group--sms
                   img(src="./img/sms.png", alt="")
                   label Введите код подтверждения из смс
                   .form-group__code
                     div
-                      input(type="text" maxlength="1" min="0" max="9").form-control
+                      input(type="tel" maxlength="1" min="0" max="9").form-control.onlyNumber
                     div
-                      input(type="text" maxlength="1" min="0" max="9").form-control
+                      input(type="tel" maxlength="1" min="0" max="9").form-control.onlyNumber
                     div
-                      input(type="text" maxlength="1" min="0" max="9").form-control
+                      input(type="tel" maxlength="1" min="0" max="9").form-control.onlyNumber
                     div
-                      input(type="text" maxlength="1" min="0" max="9").form-control
+                      input(type="tel" maxlength="1" min="0" max="9").form-control.onlyNumber
                   p
                     small Вы можете запросить новое SMS с кодом через 
                       span.font--normal.color--blue 00:59
