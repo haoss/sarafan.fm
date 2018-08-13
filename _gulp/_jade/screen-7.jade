@@ -1,0 +1,133 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная - экран 7' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная - экран 7' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Да + иконка'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__five
+            
+            .screen__five-form
+              .form-group
+                input(type="text" placeholder="Найти").form-control
+                
+          .screen__seven
+            .screen__seven-list
+              
+              .screen__seven-profile
+                .screen__seven-nav
+                  .screen__seven-nav-top
+                    span
+                  .screen__seven-nav-popup
+                    ul
+                      li: a(href="#!") Поделиться
+                      li: a(href="#!") Пожаловаться
+                .connection__block
+                  div
+                    .connection__block-img
+                      div
+                        img(src="./img/avatar-5.png", alt="")
+                  div
+                    a(href="#!").connection__block-title Крылов Сергей
+                p Подскажите нормальное СТО в Мытищах
+                
+              .screen__seven-profile
+                .screen__seven-nav
+                  .screen__seven-nav-top
+                    span
+                  .screen__seven-nav-popup
+                    ul
+                      li: a(href="#!") Редактировать
+                      li: a(href="#!") Поделиться
+                      li: a(href="#!") Удалить
+                .connection__block
+                  div
+                    .connection__block-img
+                      div
+                        img(src="./img/avatar-6.png", alt="")
+                  div
+                    a(href="#!").connection__block-title Сидченко Александр
+                p Порекомендуйте хорошего калиграфиста
+                
+              .screen__seven-profile
+                .screen__seven-nav
+                  .screen__seven-nav-top
+                    span
+                  .screen__seven-nav-popup
+                    ul
+                      li: a(href="#!") Редактировать
+                      li: a(href="#!") Поделиться
+                      li: a(href="#!") Удалить
+                .connection__block
+                  div
+                    .connection__block-img
+                      div
+                        img(src="./img/avatar-5.png", alt="")
+                  div
+                    a(href="#!").connection__block-title Крылов Сергей
+                    .small Рекомендует
+                p 
+                  a(href="#!") @litcabspa 
+                  | Хороший салон, особенно мастер Алиса и массажист Алексей
+                  
+              .screen__seven-profile
+                .screen__seven-nav
+                  .screen__seven-nav-top
+                    span
+                  .screen__seven-nav-popup
+                    ul
+                      li: a(href="#!") Редактировать
+                      li: a(href="#!") Поделиться
+                      li: a(href="#!") Удалить
+                .connection__block
+                  div
+                    .connection__block-img
+                      div
+                        img(src="./img/avatar-3.png", alt="")
+                  div
+                    a(href="#!").connection__block-title Сидченко Александр
+                    .small Рекомендует
+                p 
+                  a(href="#!") +7 (965) 344 12 12 
+                  | Сергей. Дизайнер сайтов и приложений, делает верстку
+                .screen__seven-gallery.gallery
+                  a(href="./img/gallery/img-1.png").gallery-item
+                    img(src="./img/gallery/img-1.png", alt="")
+                  a(href="./img/gallery/img-2.png").gallery-item
+                    img(src="./img/gallery/img-2.png", alt="")
+                  a(href="./img/gallery/img-3.png").gallery-item
+                    img(src="./img/gallery/img-3.png", alt="")
+                  a(href="./img/gallery/img-4.png").gallery-item
+                    img(src="./img/gallery/img-4.png", alt="")
+                  a(href="./img/gallery/img-5.png").gallery-item
+                    img(src="./img/gallery/img-5.png", alt="")
+                  a(href="./img/gallery/img-6.png").gallery-item
+                    img(src="./img/gallery/img-6.png", alt="")
+  
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

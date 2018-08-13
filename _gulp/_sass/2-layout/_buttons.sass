@@ -41,3 +41,30 @@
 
   &--header-enter
     min-width: 165px
+
+  &--add-photo
+    background: none
+    border: 0
+    min-width: inherit
+    height: auto
+    line-height: normal
+    color: #b8b8b8
+    font-size: 12px
+    padding: 0
+    text-transform: none
+    font-family: $font-roboto-l
+    svg
+      display: inline-block
+      vertical-align: -3px
+      width: 20px
+      height: 16px
+      margin-right: 12px
+      path
+        transition: fill 0.35s
+        fill: #b8b8b8
+    &:hover, &:focus
+      color: $primary-color
+      background: none
+      svg
+        path
+          fill: $primary-color

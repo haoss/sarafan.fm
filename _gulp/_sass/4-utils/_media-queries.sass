@@ -62,6 +62,38 @@
       margin-top: 8px
   .screen
     &__one
+    &__seven
+      &-profile
+        font-size: 14px
+        padding-left: 0
+        padding-right: 0
+        padding-top: 14px
+        padding-bottom: 10px
+      &-gallery
+        a
+          img
+            max-height: 108px
+      &-nav
+        &-top
+          width: 15px
+          height: 15px
+          line-height: 10px
+          top: 4px
+          right: 4px
+          span
+            height: 3px
+            width: 3px
+            &::before, &::after
+              width: 3px
+              height: 3px
+              left: -6px
+            &::after
+              left: 6px
+        &-popup
+          top: 24px
+  .mfp-container
+    padding-left: 0px
+    padding-right: 0px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -141,6 +173,10 @@
         margin-bottom: 25px
     &__three
       padding: 60px 0
+    &__four
+      &-recommendation
+        padding: 15px 0
+        font-size: 14px
     &__five
       .panel
         &-body
@@ -175,10 +211,14 @@
         &:nth-child(3)
           display: none
       &-title
-        font-size: 18px
+        font-size: 14px
         &+.connection__block-link
           display: block
           padding-top: 5px
+  .popup
+    padding: 30px 15px
+    .mfp-close
+      right: 0px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
