@@ -1,0 +1,110 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Popup test' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Popup test' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Да'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    #popup-test1.popup.mfp-hide
+      .popup__wrapper
+        .popup__title Нужна рекомендация
+        .popup__content
+          form(action="#")
+            .form-group.form-group__count.form-group--mb20
+              textarea.form-control(placeholder="Кого или что хотите найти? Друзья порекомендуют Вам проверенные контакты")
+              .form-count 500
+            .form-group
+              a(href="#!").btn.btn--add-photo
+                +camera
+                | Добавить изображения
+            .text-center
+              button(type="button").btn.btn--blue опубликовать
+              
+    #popup-test2.popup.mfp-hide
+      .popup__wrapper
+        .popup__title я рекомендую
+        .popup__content
+          form(action="#")
+            .form-group.form-group--mb20
+              input(type="text" placeholder="Кого (можете вставить ссылку)").form-control
+              .form-group__links
+                a(href="#!") Тел. книга
+                a(href="#!") Вконтакте
+                a(href="#!") Facebook
+                a(href="#!") Linkedin
+                a(href="#!") Одноклассники
+            .form-group.form-group__count.form-group--mb20
+              textarea.form-control(placeholder="Что предлагает или какую услугу оказывает? Друзья увидят Вашу рекомендацию и смогут воспользоваться ею")
+              .form-count 500
+            .form-group
+              a(href="#!").btn.btn--add-photo
+                +camera
+                | Добавить изображения
+              a(href="#!").delete-all-img Удалить все 
+              .clear15
+              .form-group__img
+                div
+                  a(href="#!")
+                    +close
+                  img(src="./img/add-img/img-1.png", alt="")
+                div
+                  a(href="#!") 
+                    +close
+                  img(src="./img/add-img/img-2.png", alt="")
+                div
+                  a(href="#!") 
+                    +close
+                  img(src="./img/add-img/img-3.png", alt="")
+                div
+                  a(href="#!") 
+                    +close
+                  img(src="./img/add-img/img-4.png", alt="")
+                div
+                  a(href="#!") 
+                    +close
+                  img(src="./img/add-img/img-5.png", alt="")
+                div
+                  a(href="#!") 
+                    +close
+                  img(src="./img/add-img/img-6.png", alt="")
+                div
+                  a(href="#!") 
+                    +close
+                  img(src="./img/add-img/img-7.png", alt="")
+                div
+                  a(href="#!") 
+                    +close
+                  img(src="./img/add-img/img-8.png", alt="")
+            .text-center
+              button(type="button").btn.btn--blue опубликовать
+    
+    .content
+      .container
+        
+        ol
+          li: a(href="#popup-test1").open-popup-link Нужна рекомендация
+          li: a(href="#popup-test2").open-popup-link я рекомендую
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

@@ -80,6 +80,38 @@
   &__four
     max-width: 360px
     margin: 0 auto
+    &-profile
+      text-align: center
+      margin-bottom: 25px
+      font-family: $font-roboto-r
+      img
+        max-width: 104px
+        max-height: 104px
+        border-radius: 50%
+        object-fit: cover
+        display: block
+        margin: 0 auto 10px
+      strong
+        font-size: 20px
+        font-family: $font-roboto-b
+        display: block
+      a
+        font-size: 14px
+        color: #b2b7c2
+        // text-decoration: underline
+    &-recommendation
+      text-align: center
+      font-size: 16px
+      border-top: 1px solid #eff4f6
+      max-width: 615px
+      margin: 0 auto
+      color: #595959
+      padding: 25px 0
+      strong
+        color: $primary-color
+        font-size: 20px
+        display: block
+        margin-bottom: 3px
   &__five
     &-form
       max-width: 360px
@@ -210,6 +242,105 @@
       span
         display: block
         line-height: 24px
+  &__seven
+    &-list
+      max-width: 615px
+      margin: 0 auto
+    &-profile
+      border-top: 1px solid #eff4f6
+      padding: 34px 30px 30px 30px
+      color: #595959
+      font-size: 16px
+      font-family: $font-roboto-l
+      position: relative
+      &:last-child
+        border-bottom: 1px solid #eff4f6
+      .connection__block
+        margin-bottom: 14px
+        &+p
+          &:last-child
+            margin-bottom: 0
+          a
+            text-decoration: none
+        .small
+          font-size: 14px
+          color: #b2b7c2
+    &-gallery
+      +clearfix
+      a
+        float: left
+        img
+          max-height: 151px
+          max-width: 100%
+    &-nav
+      &-top
+        position: absolute
+        right: 0
+        top: 18px
+        display: block
+        width: 29px
+        height: 29px
+        line-height: 23px
+        text-align: center
+        cursor: pointer
+        &.is-active
+          span
+            background: $color-blue
+            &::before, &::after
+              background: $color-blue
+        span
+          position: relative
+          display: inline-block
+          height: 5px
+          width: 5px
+          border-radius: 50%
+          background: #495676
+          &::before, &::after
+            position: absolute
+            height: 5px
+            width: 5px
+            border-radius: 50%
+            background: #495676
+            content: ''
+            left: -12px
+          &::after
+            left: 12px
+
+      &-popup
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        width: 187px
+        background: $color-white
+        right: -4px
+        top: 47px
+        z-index: 100
+        box-shadow: 0 3px 15px rgba($color-black,.05)
+        font-size: 13px
+        font-family: $font-roboto-r
+        color: $primary-color
+        padding: 10px 0
+        transform: translateY(10px)
+        transition: all 0.35s
+        &.is-active
+          opacity: 1
+          visibility: visible
+          transform: translateY(0px)
+        ul
+          margin: 0
+          padding: 0
+          li
+            list-style: none
+            &>a, &>span
+              display: block
+              color: $primary-color
+              text-decoration: none
+              height: 34px
+              line-height: 34px
+              padding: 0 10px 0 23px
+            &>a
+              &:hover, &:focus
+                color: $color-blue
 
 .social
   &__list
@@ -361,3 +492,25 @@ input.form-group__user-upload
         text-decoration: none
         &:hover, &:focus
           text-decoration: underline
+
+.popup
+  position: relative
+  background: $color-white
+  padding: 30px
+  width: auto
+  max-width: 422px
+  margin: 20px auto
+  &__title
+    font-size: 20px
+    text-transform: uppercase
+    font-family: $font-roboto-m
+    line-height: 1
+    margin-bottom: 20px
+  .mfp-close
+    right: 10px
+    top: 10px
+  .delete-all-img
+    float: right
+    font-size: 12px
+    color: $primary-color
+    margin-top: 5px

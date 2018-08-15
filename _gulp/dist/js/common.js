@@ -57,6 +57,7 @@ $(document).on('ready', function(){
   profilePopup();
   uploadImageProfile();
   inputNumber();
+  navProfilePopup();
 
   // Chrome Smooth Scroll
   try {
@@ -164,6 +165,38 @@ function profilePopup(){
   });
 }
 
+function navProfilePopup(){
+  var profile = $('.screen__seven-profile');
+
+  profile.each(function(){
+    var _this = $(this);
+    var dot = _this.find('.screen__seven-nav-top');
+    var popup = _this.find('.screen__seven-nav-popup');
+
+    dot.on('click', function(e){
+      e.stopPropagation();
+      $('.screen__seven-nav-popup').removeClass('is-active');
+      $('.screen__seven-nav-top').removeClass('is-active');
+
+      if(popup.hasClass('is-active')) {
+        popup.removeClass('is-active');
+        dot.removeClass('is-active');
+      } else {
+        popup.addClass('is-active');
+        dot.addClass('is-active');
+      }
+    });
+  })
+
+  $('.screen__seven-nav-popup').on('click', function(e){
+    e.stopPropagation();
+  });
+
+  $(document).on('click', function(){
+    $('.screen__seven-nav-popup').removeClass('is-active');
+    $('.screen__seven-nav-top').removeClass('is-active');
+  });
+}
 
 floatingLabel.init();
 
