@@ -38,14 +38,14 @@ html(lang="ru")
             .form-group.form-group--mb20
               input(type="text" placeholder="Кого (можете вставить ссылку)").form-control
               .form-group__links
-                a(href="#!") Тел. книга
+                span Выбрать из:
                 a(href="#!") Вконтакте
                 a(href="#!") Facebook
-                a(href="#!") Linkedin
-                a(href="#!") Одноклассники
             .form-group.form-group__count.form-group--mb20
               textarea.form-control(placeholder="Что предлагает или какую услугу оказывает? Друзья увидят Вашу рекомендацию и смогут воспользоваться ею")
               .form-count 500
+            .form-group.form-group--mb20
+              input.form-control(type="text" placeholder="Город" value="Россия, Москва")
             .form-group
               a(href="#!").btn.btn--add-photo
                 +camera
