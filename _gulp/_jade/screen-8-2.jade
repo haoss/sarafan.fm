@@ -19,23 +19,23 @@ html(lang="ru")
       .container
         
         .screen
-          .screen__four
+          .screen__wrapper.width-m360.margin-0auto
             
-            .screen__four-profile
+            .screen__profile
               img(src="./img/avatar-default-big.png", alt="")
               strong Крылов Сергей
               a(href="#!").color--blue.link.link--none +7 (968) 374 41 40
               br
               a(href="#!").color--blue.link.link--none vkontakte.com/krulov
           
-          .screen__seven  
-            .screen__seven-list
+          .screen__user  
+            .screen__user-list
                 
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Редактировать
                       li: a(href="#!") Поделиться
@@ -48,12 +48,13 @@ html(lang="ru")
                   div
                     a(href="#!").connection__block-title Крылов Сергей
                 p Порекомендуйте хорошего калиграфиста
+                p.p-city Москва
                   
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Редактировать
                       li: a(href="#!") Поделиться
@@ -69,6 +70,7 @@ html(lang="ru")
                 p 
                   a(href="#!") @litcabspa 
                   | Хороший салон, особенно мастер Алиса и массажист Алексей
+                p.p-city Москва
   
     include ./_include/_footer
     

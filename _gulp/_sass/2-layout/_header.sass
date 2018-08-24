@@ -96,6 +96,57 @@
         border-top: 5px solid $color-blue
         right: 0
         top: 20px
+  &__recommendation
+    position: relative
+    &-popup
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      width: 187px
+      background: $color-white
+      right: -4px
+      top: 47px
+      z-index: 100
+      box-shadow: 0 3px 15px rgba($color-black,.05)
+      font-size: 13px !important
+      font-family: $font-roboto-r
+      color: $primary-color
+      padding: 10px 0
+      transform: translateY(10px)
+      transition: all 0.35s
+      text-transform: none
+      &.is-active
+        opacity: 1
+        visibility: visible
+        transform: translateY(0px)
+      ul
+        margin: 0
+        padding: 0
+        li
+          margin: 0 !important
+          list-style: none
+          display: block !important
+          &>a, &>span
+            text-align: left !important
+            display: block !important
+            color: $primary-color
+            text-decoration: none
+            height: 34px !important
+            line-height: 34px !important
+            padding: 0 10px 0 23px
+            width: auto !important
+          &>a
+            &:hover, &:focus
+              color: $color-blue
+    &-img
+      position: relative
+      cursor: pointer
+      height: 55px
+      line-height: 55px
+      svg
+        display: inline-block !important
+        vertical-align: middle
+
   &__nav
     text-align: center
     font-size: 13px

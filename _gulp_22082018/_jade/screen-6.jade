@@ -1,0 +1,65 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная - экран 6' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная - экран 6' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Да + иконка'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__five
+            
+            .screen__five-form
+              .form-group
+                input(type="text" placeholder="Ваш телефон").form-control
+            
+            .screen__five-tab
+              .screen__five-title Подключите друзей, возможности, потребности и рекомендации, которые хотите видеть в своей ленте.
+              
+              ul(role='tablist')
+                li.active(role='presentation')
+                  a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') Всё
+                li(role='presentation')
+                  a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') Тел. книга
+                li(role='presentation')
+                  a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab') Вконтакте
+                li(role='presentation')
+                  a(href='#tab4', aria-controls='tab4', role='tab', data-toggle='tab') Facebook
+                li(role='presentation')
+                  a(href='#tab5', aria-controls='tab5', role='tab', data-toggle='tab') Linkedin
+                li(role='presentation')
+                  a(href='#tab6', aria-controls='tab6', role='tab', data-toggle='tab') Однокласники
+                  
+            .screen__five-notab
+              .screen__five-title Что бы начать пользоваться возможностями, потребностями и рекомендациями друзей из телефонной книги, установите приложение Sarafan.fm
+              .screen__five-btn
+                a(href="#!" target="_blank")
+                  +app1
+                a(href="#!" target="_blank")
+                  +app2
+  
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

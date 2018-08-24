@@ -1,0 +1,78 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная - экран 4' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная - экран 4' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Логин'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__four
+            
+            .form-group
+              .form-group__user
+                .form-group__user-img
+                  .form-group__user-img-icon
+                  .div
+                    img(src="./img/upload-img.png", alt="").form-group__user-picture
+                input.form-group__user-upload(type="file" accept="image/*")
+            
+            .social
+              .social__list.social__list--mb20.text-center
+                a(href="#!").active
+                  +iconSocial1
+                span
+                  +iconSocial2
+                span
+                  +iconSocial3
+                span
+                  +iconSocial4
+            
+            .form-group.form-group--label.form-group--mb25
+              label(for="input1").form-label Имя
+              input#input1(type="text").form-control
+            .form-group.form-group--label.form-group--mb25
+              label(for="input2").form-label Фамилия
+              input#input2(type="text").form-control
+            .form-group.form-group--label.form-group--mb25
+              label(for="input3").form-label Пол
+              input#input3(type="text").form-control
+            .form-group.form-group--label.form-group--mb25
+              label(for="input4").form-label Страна
+              input#input4(type="text" value="Россия").form-control
+            .form-group.form-group--label.form-group--mb25
+              label(for="input5").form-label Город
+              input#input5(type="text").form-control
+            .form-group.form-group--label.form-group--mb20
+              label(for="input6").form-label Почта
+              input#input6(type="text").form-control
+            
+            .form-group.text-center
+              button(type="button").btn.btn--blue Готово
+                    
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

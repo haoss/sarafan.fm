@@ -19,32 +19,31 @@ html(lang="ru")
       .container
         
         .screen
-          .screen__four
+          .screen__wrapper.width-m360.margin-0auto
             
-            .screen__four-profile
+            .screen__profile
               img(src="./img/avatar-6-big.png", alt="")
               strong Сидченко Александр
               a(href="#!") Редактировать профиль
             
-            .social
-              .social__list.social__list--mb20.text-center
-                a(href="#!").active
-                  +iconSocial1
-                a(href="#!").active
-                  +iconSocial2
-                span
-                  +iconSocial3
-                span
-                  +iconSocial4
+            .social__list.margin-b20.text-center
+              a(href="#!").active
+                +iconSocial1
+              a(href="#!").active
+                +iconSocial2
+              span
+                +iconSocial3
+              span
+                +iconSocial4
           
-          .screen__seven  
-            .screen__seven-list
+          .screen__user  
+            .screen__user-list
                 
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Редактировать
                       li: a(href="#!") Поделиться
@@ -59,11 +58,11 @@ html(lang="ru")
                 p Порекомендуйте хорошего калиграфиста
                 p.p-city Москва
                   
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Редактировать
                       li: a(href="#!") Поделиться
@@ -79,7 +78,8 @@ html(lang="ru")
                 p 
                   a(href="#!") +7 (965) 344 12 12 
                   | Сергей. Дизайнер сайтов и приложений, делает верстку
-                .screen__seven-gallery.gallery
+                p.p-city Москва
+                .screen__user-gallery.gallery
                   a(href="./img/gallery/img-1.png").gallery-item
                     img(src="./img/gallery/img-1.png", alt="")
                   a(href="./img/gallery/img-2.png").gallery-item
@@ -92,7 +92,6 @@ html(lang="ru")
                     img(src="./img/gallery/img-5.png", alt="")
                   a(href="./img/gallery/img-6.png").gallery-item
                     img(src="./img/gallery/img-6.png", alt="")
-                p.p-city Москва
   
     include ./_include/_footer
     

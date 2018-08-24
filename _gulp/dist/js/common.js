@@ -51,13 +51,19 @@ $(document).on('ready', function(){
 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true,
+    callbacks: {
+      open: function(){
+        textCount();
+      }
+    }
   });
 
   profilePopup();
   uploadImageProfile();
   inputNumber();
   navProfilePopup();
+  recommendationPopup();
 
   // Chrome Smooth Scroll
   try {
@@ -78,7 +84,9 @@ $(window).on('load', function() {
 });
 
 $(window).on('scroll', function() { });
-$(window).on('resize', function() { });
+$(window).on('resize', function() {
+  navProfilePopup();
+});
 
 /*
 version 2015-09-23 14:30 GMT +2
@@ -165,36 +173,77 @@ function profilePopup(){
   });
 }
 
-function navProfilePopup(){
-  var profile = $('.screen__seven-profile');
+function recommendationPopup(){
+  var recommendation = $('.header__recommendation');
+  var img = recommendation.find('.header__recommendation-img');
+  var popup = recommendation.find('.header__recommendation-popup');
 
-  profile.each(function(){
-    var _this = $(this);
-    var dot = _this.find('.screen__seven-nav-top');
-    var popup = _this.find('.screen__seven-nav-popup');
+  img.on('click', function(e){
+    e.stopPropagation();
+    if(popup.hasClass('is-active')) {
+      popup.removeClass('is-active')
+    } else {
+      popup.addClass('is-active')
+    }
+  });
 
-    dot.on('click', function(e){
-      e.stopPropagation();
-      $('.screen__seven-nav-popup').removeClass('is-active');
-      $('.screen__seven-nav-top').removeClass('is-active');
-
-      if(popup.hasClass('is-active')) {
-        popup.removeClass('is-active');
-        dot.removeClass('is-active');
-      } else {
-        popup.addClass('is-active');
-        dot.addClass('is-active');
-      }
-    });
-  })
-
-  $('.screen__seven-nav-popup').on('click', function(e){
+  popup.on('click', function(e){
     e.stopPropagation();
   });
 
   $(document).on('click', function(){
-    $('.screen__seven-nav-popup').removeClass('is-active');
-    $('.screen__seven-nav-top').removeClass('is-active');
+    popup.removeClass('is-active');
+  });
+}
+
+function navProfilePopup(){
+  var profile = $('.screen__user-profile');
+  var width = $(window).width();
+
+  profile.each(function(){
+    var _this = $(this);
+    var dot = _this.find('.screen__user-nav-top');
+    var popup = _this.find('.screen__user-nav-popup');
+
+    if (width>1199) {
+      dot.on('mouseover', function(e){
+        e.stopPropagation();
+        $('.screen__user-nav-popup').removeClass('is-active');
+        $('.screen__user-nav-top').removeClass('is-active');
+
+        if(popup.hasClass('is-active')) {
+          popup.removeClass('is-active');
+          dot.removeClass('is-active');
+        } else {
+          popup.addClass('is-active');
+          dot.addClass('is-active');
+        }
+      });
+    } else {
+      dot.on('click', function(e){
+        e.stopPropagation();
+        $('.screen__user-nav-popup').removeClass('is-active');
+        $('.screen__user-nav-top').removeClass('is-active');
+
+        if(popup.hasClass('is-active')) {
+          popup.removeClass('is-active');
+          dot.removeClass('is-active');
+        } else {
+          popup.addClass('is-active');
+          dot.addClass('is-active');
+        }
+      });
+    }
+
+  })
+
+  $('.screen__user-nav-popup').on('click', function(e){
+    e.stopPropagation();
+  });
+
+  $(document).on('click', function(){
+    $('.screen__user-nav-popup').removeClass('is-active');
+    $('.screen__user-nav-top').removeClass('is-active');
   });
 }
 
@@ -236,4 +285,25 @@ function inputNumber(){
             (key >= 48 && key <= 57) ||
             (key >= 96 && key <= 105));
 });
+}
+
+function textCount(){
+  var text_max = 500;
+  var text = $('.form-textcount');
+  var count = text.next('.form-count');
+
+  text.each(function(){
+    var _this = $(this);
+    count.html(text_max);
+
+    _this.on('input', function() {
+        var text_length = _this.val().length;
+        var text_remaining = text_max - text_length;
+
+        count.html(text_remaining);
+    });
+  })
+
+
+
 }

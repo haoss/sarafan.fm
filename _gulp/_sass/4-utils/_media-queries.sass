@@ -20,9 +20,10 @@
           li
             &+li
               margin-left: 38px
-  .screen
-    &__two
-      padding: 100px 0
+  .padding
+    &-md
+      &-100
+        padding: 100px 0 !important
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -61,8 +62,7 @@
     &__profile
       margin-top: 8px
   .screen
-    &__one
-    &__seven
+    &__user
       &-profile
         font-size: 14px
         padding-left: 0
@@ -94,6 +94,10 @@
   .mfp-container
     padding-left: 0px
     padding-right: 0px
+  .padding
+    &-sm
+      &-60
+        padding: 60px 0 !important
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -146,6 +150,9 @@
           display: none
       &-popup
         top: 55px
+    &__recommendation
+      &-popup
+        top: 55px
   .btn
     &--header-enter
       min-width: inherit
@@ -160,9 +167,18 @@
         background: none
         color: $color-blue
   .screen
-    &__one
+    &__wrapper
       &-title
         margin-bottom: 40px
+      &-appbtn
+        display: flex
+        flex-direction: column
+        align-items: center
+        a
+          &+a
+            margin-top: 20px
+            margin-left: 0
+    &__homepage
       &-btn
         display: block
         &>div
@@ -171,38 +187,27 @@
             padding-top: 25px
       &-img
         margin-bottom: 25px
-    &__three
-      padding: 60px 0
     &__four
       &-recommendation
         padding: 15px 0
         font-size: 14px
-    &__five
-      .panel
-        &-body
-          padding-left: 15px
-          padding-right: 15px
-        &-heading
-          .panel-title
-            font-size: 12px
-            [role=button]
-              &::after
-                right: 38px
 
+  .tab-content
+    &__panel
+      &-heading
+        .panel-title
+          font-size: 12px
+          [role=button]
+            &::after
+              right: 38px
+      .panel
         &-info
           top: -2px
           right: 0px
-      .tab-content
-        margin-left: -15px
-        margin-right: -15px
-      &-btn
-        display: flex
-        flex-direction: column
-        align-items: center
-        a
-          &+a
-            margin-top: 20px
-            margin-left: 0
+        &-body
+          padding-left: 15px
+          padding-right: 15px
+
   .connection
     &__block
       &>div
@@ -219,17 +224,37 @@
     padding: 30px 15px
     .mfp-close
       right: 0px
+  .padding
+    &-xs
+      &-0
+        padding: 0px 0 !important
+  .width
+    &-xs
+      &-100perc
+        width: 100% !important
+      &-auto
+        max-width: none !important
+        width: auto !important
+  .margin
+    &-xs
+      &-l-15
+        margin-left: -15px !important
+      &-r-15
+        margin-right: -15px !important
+      &-b5
+        margin-bottom: 5px !important
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .screen
-    &__one
+    &__homepage
       &-btn
-        .btn
-          &+small
-            max-width: 270px
-    &__two
-      padding: 0px 0
+      &-small
+        max-width: 270px
+  .padding
+    &-xxs
+      &-0
+        padding: 0 !important
   .social
     &__enter
       &-title

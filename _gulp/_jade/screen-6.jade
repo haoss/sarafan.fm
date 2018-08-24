@@ -19,18 +19,16 @@ html(lang="ru")
       .container
         
         .screen
-          .screen__five
+          .screen__wrapper
             
-            .screen__five-form
+            .width-m360.margin-0auto
               .form-group
-                input(type="text" placeholder="Ваш телефон").form-control
+                input(type="text" placeholder="Найти друга").form-control
             
-            .screen__five-tab
-              .screen__five-title Подключите друзей, возможности, потребности и рекомендации, которые хотите видеть в своей ленте.
+            .screen__wrapper-tab
+              .screen__wrapper-title2.width-m635.margin-0auto.margin-b40 Подключите друзей к своему Сарафанному радио, чтобы видеть их рекомендации.
               
-              ul(role='tablist')
-                li.active(role='presentation')
-                  a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') Всё
+              ul(role='tablist').screen__wrapper-tablist
                 li(role='presentation')
                   a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') Тел. книга
                 li(role='presentation')
@@ -42,9 +40,9 @@ html(lang="ru")
                 li(role='presentation')
                   a(href='#tab6', aria-controls='tab6', role='tab', data-toggle='tab') Однокласники
                   
-            .screen__five-notab
-              .screen__five-title Что бы начать пользоваться возможностями, потребностями и рекомендациями друзей из телефонной книги, установите приложение Sarafan.fm
-              .screen__five-btn
+            .padding-t15
+              .screen__wrapper-title2.width-m635.margin-0auto.margin-b40 Что бы подключить контакты со своей телефонной книги, установите приложение Sarafan.fm
+              .screen__wrapper-appbtn
                 a(href="#!" target="_blank")
                   +app1
                 a(href="#!" target="_blank")

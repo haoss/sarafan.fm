@@ -19,16 +19,16 @@ html(lang="ru")
       .container
         
         .screen
-          .screen__five
+          .screen__wrapper
             
-            .screen__five-form
+            .width-m360.margin-0auto
               .form-group
-                input(type="text" placeholder="Ваш телефон").form-control
+                input(type="text" placeholder="Найти друга").form-control
             
-            .screen__five-tab
-              .screen__five-title Подключите друзей, возможности, потребности и рекомендации, которые хотите видеть в своей ленте.
+            .screen__wrapper-tab
+              .screen__wrapper-title2.width-m635.margin-0auto.margin-b40 Подключите друзей, возможности, потребности и рекомендации, которые хотите видеть в своей ленте.
               
-              ul(role='tablist')
+              ul(role='tablist').screen__wrapper-tablist
                 li.active(role='presentation')
                   a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') Всё
                 li(role='presentation')
@@ -43,16 +43,16 @@ html(lang="ru")
                   a(href='#tab6', aria-controls='tab6', role='tab', data-toggle='tab') Однокласники
                   
               // Tab panes
-              .tab-content
+              .tab-content.width-m615.margin-0auto.width-xs-auto.margin-xs-l-15.margin-xs-r-15
                 #tab1.tab-pane.active(role='tabpanel')
                   
                   .panel-group(role='tablist', aria-multiselectable='false')
-                    .panel
-                      #headingOne11.panel-heading(role='tab')
+                    .panel.tab-content__panel
+                      #headingOne11.panel-heading.tab-content__panel-heading(role='tab')
                         h4.panel-title
                           a(role='button', data-toggle='collapse', href='#collapseOne11', aria-expanded='true', aria-controls='collapseOne1')
                             | Подключены к вашему Сарафану
-                          a.panel-info(href="#!")
+                          a.panel-info(href="#!" data-tooltip="Эти друзья уже подключены к Вашему сарафанному радио. Вы видите их рекомендации и потребности, а они Ваши")
                             +icon1
                       #collapseOne11.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne11')
                         .panel-body
@@ -73,12 +73,12 @@ html(lang="ru")
                               div
                                 a(href="#!").connection__block-title Антон Камоликов
                           
-                    .panel
-                      #headingTwo12.panel-heading(role='tab')
+                    .panel.tab-content__panel
+                      #headingTwo12.panel-heading.tab-content__panel-heading(role='tab')
                         h4.panel-title
                           a(role='button', data-toggle='collapse', href='#collapseTwo12', aria-expanded='true', aria-controls='collapseTwo12')
                             | Подключить к вашему Сарафану
-                          a.panel-info(href="#!")
+                          a.panel-info(href="#!" data-tooltip="Эти друзья уже подключены к Вашему сарафанному радио. Вы видите их рекомендации и потребности, а они Ваши")
                             +icon1
                       #collapseTwo12.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingTwo12')
                         .panel-body
@@ -116,23 +116,23 @@ html(lang="ru")
                 #tab2.tab-pane(role='tabpanel')
                   
                   .panel-group(role='tablist', aria-multiselectable='false')
-                    .panel
-                      #headingOne21.panel-heading(role='tab')
+                    .panel.tab-content__panel
+                      #headingOne21.panel-heading.tab-content__panel-heading(role='tab')
                         h4.panel-title
                           a(role='button', data-toggle='collapse', href='#collapseOne21', aria-expanded='true', aria-controls='collapseOne21')
                             | Подключены к вашему Сарафану
-                          a.panel-info(href="#!")
+                          a.panel-info(href="#!" data-tooltip="Эти друзья уже подключены к Вашему сарафанному радио. Вы видите их рекомендации и потребности, а они Ваши")
                             +icon1
                       #collapseOne21.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne21')
                         .panel-body
                           p 1
                           
-                    .panel
-                      #headingTwo22.panel-heading(role='tab')
+                    .panel.tab-content__panel
+                      #headingTwo22.panel-heading.tab-content__panel-heading(role='tab')
                         h4.panel-title
                           a(role='button', data-toggle='collapse', href='#collapseTwo22', aria-expanded='true', aria-controls='collapseTwo22')
                             | Подключить к вашему Сарафану
-                          a.panel-info(href="#!")
+                          a.panel-info(href="#!" data-tooltip="Эти друзья уже подключены к Вашему сарафанному радио. Вы видите их рекомендации и потребности, а они Ваши")
                             +icon1
                       #collapseTwo22.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingTwo22')
                         .panel-body

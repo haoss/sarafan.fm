@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Главная - экран 7 - Sarafan.fm</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicon/android-chrome-384x384.png" sizes="384x384">
+        <link rel="icon" type="image/png" href="./favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicon/site.webmanifest.json">
+        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicon/mstile-150x150.png">
+        <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/intl-tel-input-13.0.0/css/intlTelInput.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <header class="header">
+            <div class="container">
+                <div class="header__logo"><a href="#!"><img src="./img/logo-big.png" alt="" class="header__logo-big"><img src="./img/logo-small.png" alt="" class="header__logo-small"><span>Sarafan.fm</span></a></div>
+                <div class="header__profile">
+                    <div class="header__profile-img">
+                        <div>
+                            <div><img src="./img/img-profile-small-test.png" alt=""></div>
+                        </div><i></i>
+                    </div>
+                    <div class="header__profile-popup">
+                        <ul>
+                            <li><a href="#!">Мой профиль</a></li>
+                            <li><a href="#!">Редактировать</a></li>
+                            <li><a href="#!">Push уведомления </a></li>
+                            <li><a href="#!">Рекомендовать</a></li>
+                            <li><a href="#!">Выйти</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="header__nav header__nav--uc">
+                    <ul>
+                        <li><a href="#!"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" class="icon-2">
+                                            <path d="M17.967 87.3c0-2.87.184-5.663.473-7.171.26-1.36.473-2.507.473-2.55 0-.043-4.256-.079-9.457-.079H0l.011-4.65c.021-8.942 1.68-13.906 6.276-18.778 2.436-2.582 4.908-4.397 8.45-6.202 1.43-.73 2.6-1.382 2.6-1.45 0-.068-.48-.798-1.067-1.622-3.454-4.854-5.113-11.701-4.295-17.731.784-5.787 2.993-10.31 6.95-14.236 4.798-4.762 11.032-6.614 17.292-5.138 4.386 1.034 9.545 4.814 12.01 8.8 1.894 3.061 1.671 2.977 2.76 1.047 3.547-6.285 10.16-10.313 16.953-10.327 4.914-.01 9.408 1.963 13.273 5.828 2.187 2.187 2.803 3.055 4.154 5.854 1.946 4.033 2.697 7.248 2.68 11.481-.02 5.21-1.341 9.739-4.039 13.846-.783 1.191-1.423 2.214-1.423 2.273 0 .06 1.17.693 2.6 1.409 7.28 3.641 11.997 9.079 13.838 15.952.504 1.88.695 3.762.817 8.05L100 77.5H80.93l.216 1.025c.635 3.017.805 4.909.807 8.983L81.955 92H17.967zm57.589-3.89c-.348-4.793-2.048-8.372-5.516-11.611-1.955-1.826-3.136-2.574-7.429-4.708-6.123-3.044-6.746-3.507-6.982-5.194-.173-1.233-.141-1.284 1.464-2.36 4.06-2.721 6.884-8.669 6.884-14.503 0-6.793-3.606-13.298-8.785-15.847-1.912-.941-2.302-1.017-5.231-1.017-2.937 0-3.316.074-5.254 1.028-2.637 1.298-5.505 4.284-6.877 7.157-3.88 8.129-1.487 18.94 5.169 23.359 1.665 1.106 1.682 1.134 1.424 2.282-.347 1.544-1.061 2.061-6.702 4.857-2.63 1.304-5.633 3.015-6.673 3.802-2.894 2.191-5.245 5.642-6.142 9.016-.429 1.615-.926 5.76-.731 6.104.073.13 11.706.236 25.851.236h25.718zm-51.05-14.998c2.036-2.055 3.623-3.295 6.053-4.729 1.81-1.069 3.442-1.945 3.624-1.948.183-.003.532-.131.775-.285.358-.226.228-.576-.67-1.808-8.598-11.804-4.607-30.045 7.871-35.973 1.257-.597 2.284-1.176 2.283-1.287-.01-.665-2.227-3.89-3.657-5.32-7.756-7.756-19.836-2.914-22.352 8.96-1.576 7.437 1.411 15.722 6.928 19.212 1.254.793 1.372.972 1.211 1.837-.297 1.598-1.553 2.561-6.524 5-6.872 3.374-9.912 5.866-11.895 9.751-.896 1.757-1.849 5.72-1.849 7.69v1.684H21.745zm69.014.341c-.426-5.448-3-10.096-7.283-13.153-1.069-.762-3.994-2.384-6.501-3.604-5.587-2.718-5.971-3.007-6.192-4.655-.166-1.234-.12-1.318 1.248-2.26 4.625-3.18 7.558-9.954 7.033-16.242-.775-9.29-7.455-16.226-14.959-15.533-4.203.389-8.586 3.48-10.618 7.49-.424.837-.77 1.576-.77 1.642 0 .066 1.027.633 2.284 1.261 4.559 2.277 7.759 5.617 10.021 10.46 1.77 3.786 2.31 6.297 2.304 10.717-.007 5.652-1.29 10.046-4.175 14.294-.743 1.093-1.302 2.026-1.243 2.073.059.047 1.525.822 3.259 1.723 3.643 1.892 6.672 4.229 8.494 6.553l1.277 1.63 8.006.024 8.006.023-.191-2.443z"></path>
+                                        </svg><span class="span">Друзья</span></a></li>
+                        <li><a href="#!"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" class="icon-3">
+                                            <path d="M44.287 99.223c-5.841-.68-11.67-2.413-16.868-5.017C13.474 87.219 3.813 74.588.757 59.346c-1.01-5.03-1.01-13.292 0-18.322C6.699 11.385 37.252-6.137 66.215 3.48 83.088 9.084 95.494 23.017 99.29 40.625c.604 2.8.71 4.226.71 9.56 0 5.335-.106 6.76-.71 9.56-4.638 21.513-21.77 36.96-43.786 39.482-3.188.365-8.056.363-11.217-.004zm15.931-6.672c20.19-5.113 34.007-22.326 34.007-42.366 0-18.458-12.098-35.094-29.932-41.16-5.126-1.744-7.52-2.096-14.262-2.096-8.255 0-12.574.946-19.277 4.224-4.558 2.228-7.704 4.445-11.487 8.092-6.59 6.355-10.62 13.582-12.707 22.79-.806 3.552-.806 12.749 0 16.3 1.353 5.97 3.693 11.447 6.873 16.088C16.94 79.541 23.17 85.18 28.58 88.132c7.62 4.158 13.318 5.504 22.548 5.327 5.093-.098 6.41-.23 9.09-.908zM47.979 66.812c-.767-.767-.77-.79-.77-7.21v-6.44H34.407l-.964-.81c-.803-.676-.964-1.039-.964-2.167s.161-1.49.964-2.166l.964-.812H47.21v-6.44c0-6.42.002-6.442.77-7.209 1.068-1.07 3.033-1.07 4.102 0 .767.767.77.79.77 7.21v6.44h6.284c7.056 0 8.005.214 8.34 1.886.224 1.125.224 1.058 0 2.182-.335 1.672-1.284 1.887-8.34 1.887h-6.284v6.44c0 6.42-.003 6.442-.77 7.21-.566.565-1.108.769-2.051.769-.944 0-1.486-.204-2.052-.77z"></path>
+                                        </svg><span class="span">Нужна рекомендация</span></a></li>
+                        <li class="hidden-xs"><a href="#!"> <span class="span">я рекомендую</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div class="screen">
+                    <div class="screen__five">
+                        <div class="screen__five-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Найти" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen__seven">
+                        <div class="screen__seven-list">
+                            <div class="screen__seven-profile">
+                                <div class="screen__seven-nav">
+                                    <div class="screen__seven-nav-top"><span></span></div>
+                                    <div class="screen__seven-nav-popup">
+                                        <ul>
+                                            <li><a href="#!">Поделиться</a></li>
+                                            <li><a href="#!">Пожаловаться</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="connection__block">
+                                    <div>
+                                        <div class="connection__block-img">
+                                            <div><img src="./img/avatar-5.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div><a href="#!" class="connection__block-title">Крылов Сергей</a></div>
+                                </div>
+                                <p>Подскажите нормальное СТО в Мытищах</p>
+                            </div>
+                            <div class="screen__seven-profile">
+                                <div class="screen__seven-nav">
+                                    <div class="screen__seven-nav-top"><span></span></div>
+                                    <div class="screen__seven-nav-popup">
+                                        <ul>
+                                            <li><a href="#!">Редактировать</a></li>
+                                            <li><a href="#!">Поделиться</a></li>
+                                            <li><a href="#!">Удалить</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="connection__block">
+                                    <div>
+                                        <div class="connection__block-img">
+                                            <div><img src="./img/avatar-6.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div><a href="#!" class="connection__block-title">Сидченко Александр</a></div>
+                                </div>
+                                <p>Порекомендуйте хорошего калиграфиста</p>
+                            </div>
+                            <div class="screen__seven-profile">
+                                <div class="screen__seven-nav">
+                                    <div class="screen__seven-nav-top"><span></span></div>
+                                    <div class="screen__seven-nav-popup">
+                                        <ul>
+                                            <li><a href="#!">Редактировать</a></li>
+                                            <li><a href="#!">Поделиться</a></li>
+                                            <li><a href="#!">Удалить</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="connection__block">
+                                    <div>
+                                        <div class="connection__block-img">
+                                            <div><img src="./img/avatar-5.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div><a href="#!" class="connection__block-title">Крылов Сергей</a>
+                                        <div class="small">Рекомендует</div>
+                                    </div>
+                                </div>
+                                <p> <a href="#!">@litcabspa </a>Хороший салон, особенно мастер Алиса и массажист Алексей</p>
+                            </div>
+                            <div class="screen__seven-profile">
+                                <div class="screen__seven-nav">
+                                    <div class="screen__seven-nav-top"><span></span></div>
+                                    <div class="screen__seven-nav-popup">
+                                        <ul>
+                                            <li><a href="#!">Редактировать</a></li>
+                                            <li><a href="#!">Поделиться</a></li>
+                                            <li><a href="#!">Удалить</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="connection__block">
+                                    <div>
+                                        <div class="connection__block-img">
+                                            <div><img src="./img/avatar-3.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div><a href="#!" class="connection__block-title">Сидченко Александр</a>
+                                        <div class="small">Рекомендует</div>
+                                    </div>
+                                </div>
+                                <p> <a href="#!">+7 (965) 344 12 12 </a>Сергей. Дизайнер сайтов и приложений, делает верстку</p>
+                                <div class="screen__seven-gallery gallery"><a href="./img/gallery/img-1.png" class="gallery-item"><img src="./img/gallery/img-1.png" alt=""></a><a href="./img/gallery/img-2.png" class="gallery-item"><img src="./img/gallery/img-2.png" alt=""></a><a href="./img/gallery/img-3.png" class="gallery-item"><img src="./img/gallery/img-3.png" alt=""></a><a href="./img/gallery/img-4.png" class="gallery-item"><img src="./img/gallery/img-4.png" alt=""></a><a href="./img/gallery/img-5.png" class="gallery-item"><img src="./img/gallery/img-5.png" alt=""></a><a href="./img/gallery/img-6.png" class="gallery-item"><img src="./img/gallery/img-6.png" alt=""></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer"></footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/floatingLabel.js"></script>
+        <script src="./js/libs/intl-tel-input-13.0.0/js/intlTelInput.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

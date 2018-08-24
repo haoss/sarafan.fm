@@ -1,0 +1,47 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = '404' //активный пункт меню, список в header.jade
+  -var pageTitle = '404' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Нет'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__404
+            .screen__404-img
+              img(src="./img/img-404.png", alt="")
+            .screen__404-title
+              strong Страница не найдена
+              span Что-то пошло не так. Возможно, вы ошиблись, набирая адрес в строке браузера — так бывает. Если вы уверены, что адрес набран верно, то страница, скорее всего, была удалена и ее больше нет.
+            
+            .text-center
+              p
+                strong Но не отчаивайтесь! 
+              .clear10
+              a(href="#!").btn.btn--blue на главную
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

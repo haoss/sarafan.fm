@@ -19,7 +19,7 @@ html(lang="ru")
       .container
         
         .screen
-          .screen__four
+          .screen__wrapper.width-m360.margin-0auto
             
             .form-group
               .form-group__user
@@ -30,7 +30,7 @@ html(lang="ru")
                 input.form-group__user-upload(type="file" accept="image/*")
             
             .social
-              .social__list.social__list--mb20.text-center
+              .social__list.text-center.margin-b20
                 a(href="#!").active
                   +iconSocial1
                 span
@@ -40,22 +40,22 @@ html(lang="ru")
                 span
                   +iconSocial4
             
-            .form-group.form-group--label.form-group--mb25
+            .form-group.pos-r.margin-b25
               label(for="input1").form-label Имя
               input#input1(type="text").form-control
-            .form-group.form-group--label.form-group--mb25
+            .form-group.pos-r.margin-b25
               label(for="input2").form-label Фамилия
               input#input2(type="text").form-control
-            .form-group.form-group--label.form-group--mb25
+            .form-group.pos-r.margin-b25
               label(for="input3").form-label Пол
               input#input3(type="text").form-control
-            .form-group.form-group--label.form-group--mb25
+            .form-group.pos-r.margin-b25
               label(for="input4").form-label Страна
               input#input4(type="text" value="Россия").form-control
-            .form-group.form-group--label.form-group--mb25
+            .form-group.pos-r.margin-b25
               label(for="input5").form-label Город
               input#input5(type="text").form-control
-            .form-group.form-group--label.form-group--mb20
+            .form-group.pos-r.margin-b20
               label(for="input6").form-label Почта
               input#input6(type="text").form-control
             

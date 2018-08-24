@@ -53,12 +53,12 @@ if uc == 'Да'
             a(href="#!") 
               +icon2
               span.span Друзья
-          li
-            a(href="#!") 
+          li.hidden-xs
+            a(href="#popup-test1").open-popup-link
               +icon3
               span.span Нужна рекомендация
           li.hidden-xs
-            a(href="#!") 
+            a(href="#popup-test2").open-popup-link
               span.span я рекомендую
               
 if uc == 'Да + иконка'
@@ -96,12 +96,22 @@ if uc == 'Да + иконка'
             a(href="#!") 
               +icon2
               span.span Друзья
-          li
-            a(href="#!") 
+          li.visible-xs-inline-block
+            .header__recommendation
+              .header__recommendation-img
+                +icon3
+              .header__recommendation-popup
+                ul
+                  li
+                    a(href="#popup-test1").open-popup-link Нужна рекомендация
+                  li
+                    a(href="#popup-test2").open-popup-link Я рекомендую
+          li.hidden-xs
+            a(href="#popup-test1").open-popup-link
               +icon3
               span.span Нужна рекомендация
           li.hidden-xs
-            a(href="#!") 
+            a(href="#popup-test2").open-popup-link
               span.span я рекомендую
               
 if uc == 'Логин'

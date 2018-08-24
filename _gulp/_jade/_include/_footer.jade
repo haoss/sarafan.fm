@@ -1,4 +1,80 @@
 // Footer
 footer.footer
 
-  
+#popup-test1.popup.mfp-hide
+  .popup__wrapper
+    .popup__title Нужна рекомендация
+    .popup__content
+      form(action="#")
+        .alert.alert-danger 
+          strong Внимание! 
+          | Заполните все поля
+        .form-group.pos-r.margin-b20
+          textarea.form-control.form-textcount(min="0" maxlength="500" placeholder="Кого или что хотите найти? Друзья порекомендуют Вам проверенные контакты")
+          .form-count 500
+        .form-group.margin-b20
+          input.form-control(type="text" placeholder="Город" value="Россия, Москва")
+        .form-group
+          a(href="#!").btn.btn--add-photo
+            +camera
+            | Добавить изображения
+        .text-center
+          button(type="button").btn.btn--blue опубликовать
+          
+#popup-test2.popup.mfp-hide
+  .popup__wrapper
+    .popup__title я рекомендую
+    .popup__content
+      form(action="#")
+        .form-group.margin-b20
+          input(type="text" placeholder="Кого (можете вставить ссылку)").form-control
+          .form-group__links
+            span Выбрать из:
+            a(href="#!") Вконтакте
+            a(href="#!") Facebook
+        .form-group.pos-r.margin-b20
+          textarea.form-control.form-textcount(min="0" maxlength="500" placeholder="Что предлагает или какую услугу оказывает? Друзья увидят Вашу рекомендацию и смогут воспользоваться ею")
+          .form-count 500
+        .form-group.margin-b20
+          input.form-control(type="text" placeholder="Город" value="Россия, Москва")
+        .form-group
+          a(href="#!").btn.btn--add-photo
+            +camera
+            | Добавить изображения
+          //- a(href="#!").delete-all-img Удалить все 
+          .clear15
+          .form-group__img
+            div
+              a(href="#!")
+                +close
+              img(src="./img/add-img/img-1.png", alt="")
+            div
+              a(href="#!") 
+                +close
+              img(src="./img/add-img/img-2.png", alt="")
+            div
+              a(href="#!") 
+                +close
+              img(src="./img/add-img/img-3.png", alt="")
+            div
+              a(href="#!") 
+                +close
+              img(src="./img/add-img/img-4.png", alt="")
+            div
+              a(href="#!") 
+                +close
+              img(src="./img/add-img/img-5.png", alt="")
+            div
+              a(href="#!") 
+                +close
+              img(src="./img/add-img/img-6.png", alt="")
+            div
+              a(href="#!") 
+                +close
+              img(src="./img/add-img/img-7.png", alt="")
+            div
+              a(href="#!") 
+                +close
+              img(src="./img/add-img/img-8.png", alt="")
+        .text-center
+          button(type="button").btn.btn--blue опубликовать

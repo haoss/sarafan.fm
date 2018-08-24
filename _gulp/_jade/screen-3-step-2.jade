@@ -19,19 +19,20 @@ html(lang="ru")
       .container
         
         .screen
-          .screen__three
+          .screen__wrapper.padding-106.padding-sm-60.padding-xs-0.width-m360.margin-0auto
             form(action="#")
               
-              .screen__three-block
-                .form-group
+              .text-center
+                .form-group.margin-xs-b5
+                  label.color--blue.text-left Номер телефона
                   input(type="tel" placeholder="+1 (123) 456-78-91" value="+7 987 654 3210" readonly).form-control.intlTelInput
                 
-                .form-group.form-group--sms
+                .form-group.form-group--sms.margin-b15
                   img(src="./img/sms.png", alt="")
-                  label Введите код подтверждения из смс
+                  label Код подтверждения из смс
                   .form-group__code
                     div
-                      input(type="tel" maxlength="1" min="0" max="9").form-control.onlyNumber
+                      input(type="tel" maxlength="1" min="0" max="9" autofocus).form-control.onlyNumber
                     div
                       input(type="tel" maxlength="1" min="0" max="9").form-control.onlyNumber
                     div

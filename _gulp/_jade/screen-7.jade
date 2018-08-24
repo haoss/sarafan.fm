@@ -19,20 +19,20 @@ html(lang="ru")
       .container
         
         .screen
-          .screen__five
+          .screen__wrapper
             
-            .screen__five-form
+            .width-m360.margin-0auto
               .form-group
-                input(type="text" placeholder="Найти").form-control
+                input(type="text" placeholder="Найти в окружении").form-control
                 
-          .screen__seven
-            .screen__seven-list
+          .screen__user
+            .screen__user-list
               
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Поделиться
                       li: a(href="#!") Пожаловаться
@@ -44,12 +44,13 @@ html(lang="ru")
                   div
                     a(href="#!").connection__block-title Крылов Сергей
                 p Подскажите нормальное СТО в Мытищах
+                p.p-city Москва
                 
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Редактировать
                       li: a(href="#!") Поделиться
@@ -62,12 +63,13 @@ html(lang="ru")
                   div
                     a(href="#!").connection__block-title Сидченко Александр
                 p Порекомендуйте хорошего калиграфиста
+                p.p-city Москва
                 
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Редактировать
                       li: a(href="#!") Поделиться
@@ -83,12 +85,13 @@ html(lang="ru")
                 p 
                   a(href="#!") @litcabspa 
                   | Хороший салон, особенно мастер Алиса и массажист Алексей
+                p.p-city Москва
                   
-              .screen__seven-profile
-                .screen__seven-nav
-                  .screen__seven-nav-top
+              .screen__user-profile
+                .screen__user-nav
+                  .screen__user-nav-top
                     span
-                  .screen__seven-nav-popup
+                  .screen__user-nav-popup
                     ul
                       li: a(href="#!") Редактировать
                       li: a(href="#!") Поделиться
@@ -104,7 +107,8 @@ html(lang="ru")
                 p 
                   a(href="#!") +7 (965) 344 12 12 
                   | Сергей. Дизайнер сайтов и приложений, делает верстку
-                .screen__seven-gallery.gallery
+                p.p-city Москва
+                .screen__user-gallery.gallery
                   a(href="./img/gallery/img-1.png").gallery-item
                     img(src="./img/gallery/img-1.png", alt="")
                   a(href="./img/gallery/img-2.png").gallery-item
