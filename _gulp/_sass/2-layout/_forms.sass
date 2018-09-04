@@ -34,10 +34,6 @@ button, html input[type=button], input[type=reset], input[type=submit]
 .form
   &-group,  &__group
     margin-bottom: 30px
-    &--mb20
-      margin-bottom: 20px
-    &--mb25
-      margin-bottom: 25px
     &__code
       display: flex
       justify-content: space-between
@@ -55,7 +51,6 @@ button, html input[type=button], input[type=reset], input[type=submit]
       input
         text-align: center
     &--sms
-      margin-bottom: 15px
       label
         font-size: 18px
         font-family: $font-roboto-r
@@ -63,6 +58,7 @@ button, html input[type=button], input[type=reset], input[type=submit]
         color: $color-blue
         margin-bottom: 15px
         white-space: nowrap
+        // display: block
         a
           display: inline-block
           vertical-align: middle
@@ -89,15 +85,11 @@ button, html input[type=button], input[type=reset], input[type=submit]
         left: 0
         top: 6px
         z-index: 5
-    &--label
-      position: relative
-    &__count
-      position: relative
     &__links
       white-space: nowrap
       overflow: hidden
       overflow-x: auto
-      padding-top: 18px
+      padding-top: 10px
       padding-bottom: 5px
       font-size: 13px
       a
@@ -107,6 +99,11 @@ button, html input[type=button], input[type=reset], input[type=submit]
           text-decoration: underline
         &+a
           margin-left: 10px
+      span
+        font-family: $font-roboto-b
+        display: inline-block
+        margin-right: 10px
+        font-size: 15px
     &__img
       display: flex
       flex-wrap: wrap
@@ -186,7 +183,8 @@ label
   display: inline-block
   max-width: 100%
   margin-bottom: 5px
-  font-weight: 700
+  font-weight: 400
+  font-family: $font-roboto-m
 
 .has
   &-success .form-control

@@ -1,0 +1,70 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная - экран 8 - 3' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная - экран 8 - 3' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Да + иконка'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__four
+            
+            .screen__four-profile
+              img(src="./img/avatar-3-big.png", alt="")
+              strong Лимов Сергей
+              a(href="#!").color--blue.link.link--none +7 (963) 344 12 12
+              br
+              a(href="#!").color--blue.link.link--none @limovigor
+          
+          .screen__four-recommendation
+            strong Рекомендаций нет
+            span Возможности, которые рекомендуют мои друзья
+          
+          .screen__seven  
+            .screen__seven-list
+                
+              .screen__seven-profile
+                .screen__seven-nav
+                  .screen__seven-nav-top
+                    span
+                  .screen__seven-nav-popup
+                    ul
+                      li: a(href="#!") Редактировать
+                      li: a(href="#!") Поделиться
+                      li: a(href="#!") Удалить
+                .connection__block
+                  div
+                    .connection__block-img
+                      div
+                        img(src="./img/avatar-7.png", alt="")
+                  div
+                    a(href="#!").connection__block-title Зашан Лидия
+                p 
+                  a(href="#!") Лимов Сергей 
+                  | занимается сборкой мебели и ее изготовлением. Рекомендую.
+  
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

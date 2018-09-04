@@ -1,6 +1,6 @@
 /* modules */
 .screen
-  &__one
+  &__wrapper
     &-title
       text-align: center
       color: #595959
@@ -15,6 +15,51 @@
         color: $primary-color
         margin-bottom: 12px
         display: block
+    &-title2
+      text-align: center
+      font-size: 16px
+      font-family: $font-roboto-l
+      color: #595959
+      line-height: 26px
+      // margin: 0 auto 40px
+      // max-width: 635px
+    &-appbtn
+      text-align: center
+      a
+        display: inline-block
+        &+a
+          margin-left: 30px
+      svg
+        width: 142px
+        height: 48px
+        display: block
+    &-tablist
+      overflow: hidden
+      overflow-x: auto
+      text-align: center
+      margin: 0 0 32px 0
+      padding: 0 0 11px 0
+      font-size: 16px
+      white-space: nowrap
+      &>li
+        list-style: none
+        margin: 0
+        display: inline-block
+        &+li
+          margin-left: 27px
+        &>a
+          text-decoration: none
+          font-family: $font-roboto-m
+          text-transform: uppercase
+          color: #595959
+          border-bottom: 2px solid transparent
+          padding-bottom: 10px
+          &:hover
+            color: $color-blue
+        &.active
+          &>a
+            border-bottom-color: $color-blue
+  &__homepage
     &-img
       margin-top: -10px
       margin-left: -15px
@@ -29,193 +74,53 @@
       text-align: center
       &>div
         width: 50%
-      .btn
-        margin-bottom: 20px
-        &+small
-          display: block
-          color: #595959
-          font-size: 12px
-          line-height: 17px
-          max-width: 360px
-          margin: 0 auto
-  &__two
-    padding: 160px 0
-    &-title
-      text-align: center
+    &-small
+      display: block
       color: #595959
-      font-size: 16px
-      font-family: $font-roboto-l
-      margin-bottom: 20px
-      span
-        display: block
-        line-height: 24px
-      strong
-        font-size: 30px
-        line-height: 1.1
-        color: $primary-color
-        margin-bottom: 12px
-        display: block
-    &-btn
-      text-align: center
-  &__three
-    max-width: 360px
-    margin: 0 auto
-    padding: 106px 0
-    &-block
-      text-align: center
-      .btn
-        margin-bottom: 15px
-        &+p
-          margin: 0
-          color: #b2b7c2
-          a
-            color: #b2b7c2
-    &-pass-title
-      text-align: center
-      color: $color-blue
-      text-transform: uppercase
-      font-size: 22px
-      font-family: $font-roboto-r
-      margin-bottom: 15px
-  &__four
-    max-width: 360px
-    margin: 0 auto
-    &-profile
-      text-align: center
-      margin-bottom: 25px
-      font-family: $font-roboto-r
-      img
-        max-width: 104px
-        max-height: 104px
-        border-radius: 50%
-        object-fit: cover
-        display: block
-        margin: 0 auto 10px
-      strong
-        font-size: 20px
-        font-family: $font-roboto-b
-        display: block
-      a
-        font-size: 14px
-        color: #b2b7c2
-        // text-decoration: underline
-    &-recommendation
-      text-align: center
-      font-size: 16px
-      border-top: 1px solid #eff4f6
-      max-width: 615px
-      margin: 0 auto
-      color: #595959
-      padding: 25px 0
-      strong
-        color: $primary-color
-        font-size: 20px
-        display: block
-        margin-bottom: 3px
-  &__five
-    &-form
+      font-size: 12px
+      line-height: 17px
       max-width: 360px
-      margin: 0 auto 30px
-    &-title
-      text-align: center
-      font-size: 16px
-      font-family: $font-roboto-l
-      color: #595959
-      line-height: 26px
-      margin: 0 auto 40px
-      max-width: 635px
-    &-tab
-      ul
-        overflow: hidden
-        overflow-x: auto
-        text-align: center
-        margin: 0 0 32px 0
-        padding: 0 0 11px 0
-        font-size: 16px
-        white-space: nowrap
-        &>li
-          list-style: none
-          margin: 0
-          display: inline-block
-          &+li
-            margin-left: 27px
-          &>a
-            text-decoration: none
-            font-family: $font-roboto-m
-            text-transform: uppercase
-            color: #595959
-            border-bottom: 2px solid transparent
-            padding-bottom: 10px
-            &:hover
-              color: $color-blue
-          &.active
-            &>a
-              border-bottom-color: $color-blue
-    .tab-content
-      max-width: 615px
       margin: 0 auto
-    .panel
-      padding: 0
-      margin: 0
-      border: 0
-      border-radius: 0 !important
-      box-shadow: none
-      &-heading
-        background: #eff4f6
-        border-radius: 0
-        .panel-title
-          font-size: 14px
-          font-family: $font-roboto-r
-          text-transform: uppercase
-          font-weight: 400
-          padding-right: 55px
-          position: relative
-          z-index: 8
-          [role="button"]
-            text-decoration: none
-            display: block
-            color: #595959
-            &::after
-              width: 12px
-              height: 7px
-              content: ''
-              position: absolute
-              right: 56px
-              bottom: 5px
-              transform-origin: 50% 50%
-              transform: rotate(0deg)
-              transition: transform 0.35s
-              background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADzSURBVBiVbY67SgNRGIS//2yi6wXBXhQ7K19BUgkBUUG2STBZIgZ8ivMSBgLxEkx1ilgoEcQmVZ7BMvoABl11zUZ/GxdWyJQz3wwj5+3uAMPj08rykS0UJkyRc857j72WqmwYRIYolbXnl0vnnDcdzrUVqSIyNIt+cgjcKpSir9yZtdaksKpKFHsNhZII9/I9qpogCMbRyD9AuEOprK5vtqy1RlXl4qp7CnIM8rAwO9kLwzCWdK3ZvJnPzyU9YEtFGgCiegL0k898sV7f+QCQ7N9s6c8aaOJt12q7bynzrwDQ6fSWxj/xNcCM8ffL5eJrNv8FbrFd18hiu2YAAAAASUVORK5CYII=') 0 0 no-repeat
-            &[aria-expanded="true"]
-              &::after
-                transform: rotate(-180deg)
-      &-body
-        border: 0 !important
-        padding: 30px 30px 25px 30px
-      &-info
-        position: absolute
-        right: 17px
-        top: 0px
-        z-index: 10
-        svg
-          width: 20px
-          height: 20px
-          display: block
-          path
-            fill: #9ea2ae
-      &+.panel
-    &-btn
-      text-align: center
-      a
-        display: inline-block
-        &+a
-          margin-left: 30px
-      svg
-        width: 142px
-        height: 48px
-        display: block
-    &-notab
-      padding-top: 15px
+  &__pass-title
+    text-align: center
+    color: $color-blue
+    text-transform: uppercase
+    font-size: 22px
+    font-family: $font-roboto-r
+    margin-bottom: 15px
+  &__profile
+    text-align: center
+    margin-bottom: 25px
+    font-family: $font-roboto-r
+    img
+      max-width: 104px
+      max-height: 104px
+      border-radius: 50%
+      object-fit: cover
+      display: block
+      margin: 0 auto 10px
+    strong
+      font-size: 20px
+      font-family: $font-roboto-b
+      display: block
+    a
+      font-size: 14px
+      color: #b2b7c2
+      // text-decoration: underline
+  &__recommendation
+    text-align: center
+    font-size: 16px
+    border-top: 1px solid #eff4f6
+    max-width: 615px
+    margin: 0 auto
+    color: #595959
+    padding: 25px 0
+    strong
+      color: $primary-color
+      font-size: 20px
+      display: block
+      margin-bottom: 3px
+
   &__404
     color: #595959
     font-size: 16px
@@ -242,7 +147,7 @@
       span
         display: block
         line-height: 24px
-  &__seven
+  &__user
     &-list
       max-width: 615px
       margin: 0 auto
@@ -266,6 +171,7 @@
           font-size: 14px
           color: #b2b7c2
     &-gallery
+      margin-bottom: 20px
       +clearfix
       a
         float: left
@@ -345,12 +251,6 @@
 .social
   &__list
     margin-bottom: 45px
-    &--mb20
-      margin-bottom: 20px
-    &+p
-      font-size: 12px
-      a
-        color: #b2b7c2
     &>a, &>span
       height: 50px
       width: 50px
@@ -401,6 +301,17 @@
     display: flex
     overflow: hidden
     cursor: pointer
+    position: relative
+    &::after
+      content: 'Добавить фото'
+      position: absolute
+      left: 0
+      right: 0
+      text-align: center
+      bottom: 0
+      font-size: 17px
+      color: #8c939f
+      font-family: $font-roboto-r
     &>.div
       width: 105px
       height: 105px
@@ -514,3 +425,88 @@ input.form-group__user-upload
     font-size: 12px
     color: $primary-color
     margin-top: 5px
+
+.p-city
+  color: #999
+  font-family: $font-roboto-r
+  font-size: 14px
+  margin-top: -10px
+
+.tab-content
+  &__panel
+    padding: 0
+    margin: 0
+    border: 0
+    border-radius: 0 !important
+    box-shadow: none
+    &-heading
+      background: #eff4f6
+      border-radius: 0
+      .panel-title
+        font-size: 14px
+        font-family: $font-roboto-r
+        text-transform: uppercase
+        font-weight: 400
+        padding-right: 55px
+        position: relative
+        z-index: 8
+        [role="button"]
+          text-decoration: none
+          display: block
+          color: #595959
+          &::after
+            width: 12px
+            height: 7px
+            content: ''
+            position: absolute
+            right: 56px
+            bottom: 5px
+            transform-origin: 50% 50%
+            transform: rotate(0deg)
+            transition: transform 0.35s
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADzSURBVBiVbY67SgNRGIS//2yi6wXBXhQ7K19BUgkBUUG2STBZIgZ8ivMSBgLxEkx1ilgoEcQmVZ7BMvoABl11zUZ/GxdWyJQz3wwj5+3uAMPj08rykS0UJkyRc857j72WqmwYRIYolbXnl0vnnDcdzrUVqSIyNIt+cgjcKpSir9yZtdaksKpKFHsNhZII9/I9qpogCMbRyD9AuEOprK5vtqy1RlXl4qp7CnIM8rAwO9kLwzCWdK3ZvJnPzyU9YEtFGgCiegL0k898sV7f+QCQ7N9s6c8aaOJt12q7bynzrwDQ6fSWxj/xNcCM8ffL5eJrNv8FbrFd18hiu2YAAAAASUVORK5CYII=') 0 0 no-repeat
+          &[aria-expanded="true"]
+            &::after
+              transform: rotate(-180deg)
+    .panel
+      &-body
+        border: 0 !important
+        padding: 30px 30px 25px 30px
+      &-info
+        position: absolute
+        right: 17px
+        top: 0px
+        z-index: 10
+        svg
+          width: 20px
+          height: 20px
+          display: block
+          path
+            fill: #9ea2ae
+        &::after
+          content: attr(data-tooltip)
+          opacity: 0
+          visibility: hidden
+          position: absolute
+          width: 187px
+          background: $color-white
+          right: 0px
+          top: 28px
+          z-index: 100
+          box-shadow: 0 3px 15px rgba($color-black,.05)
+          font-size: 13px
+          font-family: $font-roboto-r
+          color: $primary-color
+          padding: 10px
+          transform: translateY(10px)
+          transition: all 0.35s
+          transition-delay: 0.25s
+          text-transform: none
+          color: #666
+        &:hover
+          &::after
+            opacity: 1
+            visibility: visible
+            transform: translateY(0px)
+
+      &+.panel
