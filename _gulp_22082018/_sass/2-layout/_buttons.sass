@@ -1,0 +1,70 @@
+/* buttons */
+
+.btn
+  display: inline-block
+  padding: 0 15px
+  margin-bottom: 0
+  font-size: 13px
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  touch-action: manipulation
+  cursor: pointer
+  user-select: none
+  background:
+    image: none
+    color: $color-white
+  border: 2px solid $color-blue
+  border-radius: 35px
+  height: 40px
+  line-height: 37px
+  text-decoration: none
+  transition: border 0.35s, color 0.35s, background 0.35s
+  color: $color-blue
+  font-family: $font-roboto-b
+  text-transform: uppercase
+  min-width: 221px
+
+  &:hover, &:focus, &:active
+    outline: none
+    color: $color-white
+    background: $color-blue
+    box-shadow: none
+
+  &--blue
+    color: $color-white
+    background-color: $color-blue
+    &:hover, &:focus
+      background: $color-white
+      color: $color-blue
+
+  &--header-enter
+    min-width: 165px
+
+  &--add-photo
+    background: none
+    border: 0
+    min-width: inherit
+    height: auto
+    line-height: normal
+    color: #b8b8b8
+    font-size: 12px
+    padding: 0
+    text-transform: none
+    font-family: $font-roboto-l
+    svg
+      display: inline-block
+      vertical-align: -3px
+      width: 20px
+      height: 16px
+      margin-right: 12px
+      path
+        transition: fill 0.35s
+        fill: #b8b8b8
+    &:hover, &:focus
+      color: $primary-color
+      background: none
+      svg
+        path
+          fill: $primary-color

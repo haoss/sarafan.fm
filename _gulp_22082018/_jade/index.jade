@@ -1,0 +1,50 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная - экран 1' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная - экран 1' + ' - Sarafan.fm' //title страницы для генерации верстки  
+  -var uc = 'Нет'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .screen
+          .screen__one
+            .screen__one-title
+              strong Запустите свое сарафанное радио.
+              span Пользуйтесь рекомендациями ближайшего окружения. Находите нужных людей используя свои связи.
+                br
+                | Рекомендуйте друзьям проверенные контакты.
+            .screen__one-img
+              img(src="./img/img-content-screen-1.png", alt="")
+            .screen__one-btn
+              div
+                a(href="#!").btn.btn--blue нужна рекомендация
+                small Опишите кого или что хотите найти. Друзья рекомендуют вам проверенные контакты.
+              div
+                a(href="#!").btn.btn--blue я рекомендую
+                small Порекомендуйте друзьям проверенного человека, услугами которого пользовадись и остались довольны.
+    
+    include ./_include/_footer
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
